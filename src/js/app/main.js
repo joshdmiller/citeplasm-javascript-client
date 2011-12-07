@@ -19,6 +19,7 @@
  */
 define([ 'dojo/has', 'require' ], function (has, require) {
     var app = {};
+    console.log( "[app/main] Loading Citeplasm..." );
 
     /*
      * This require call's first dependency, "./Dialog", uses a relative module identifier; you should use this
@@ -32,9 +33,11 @@ define([ 'dojo/has', 'require' ], function (has, require) {
      * require just "dojo/domReady", it would load that module just like any other module, without any of the
      * special plugin functionality.
      */
-    require([ 'dojo/domReady!' ], function (Dialog) {
-        console.log("[app/main] Citeplasm has loaded.")
+    require([ 'citeplasm', 'dojo/domReady!' ], function ( Citeplasm ) {
+        Citeplasm.init ();
     });
+        
+    console.log("[app/main] Citeplasm has loaded successfully.");
 
     return app;
 });

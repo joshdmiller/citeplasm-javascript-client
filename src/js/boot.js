@@ -19,7 +19,8 @@ require({
         { name: 'dojo', location: 'dojo' },
         { name: 'dijit', location: 'dijit' },
         //{ name: 'dojox', location: 'dojox' },
-        { name: 'app', location: 'app' }
+        { name: 'app', location: 'app' },
+        { name: 'citeplasm', location: 'citeplasm' }
     ]
 // Require 'app'. This loads the main application file, app/main.js.
 }, [ 'app' ]);
