@@ -32,10 +32,8 @@ define([ 'dojo/has', 'require' ], function (has, require) {
      * require just "dojo/domReady", it would load that module just like any other module, without any of the
      * special plugin functionality.
      */
-    require([ './Dialog', 'dojo/domReady!' ], function (Dialog) {
-        app.dialog = new Dialog().placeAt(document.body);
-        app.dialog.startup();
-        app.dialog.show();
+    require([ 'dojo/domReady!' ], function (Dialog) {
+        console.log("[app/main] Citeplasm has loaded.")
     });
 
     return app;
