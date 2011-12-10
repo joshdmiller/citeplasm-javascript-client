@@ -1,3 +1,4 @@
+//>> pure-amd
 /**
  * This file is your application's main JavaScript file. It is listed as a dependency in _base.js and will
  * automatically load when _base.js loads.
@@ -33,7 +34,7 @@ define([ 'dojo/has', 'require' ], function (has, require) {
      * require just "dojo/domReady", it would load that module just like any other module, without any of the
      * special plugin functionality.
      */
-    require([ 'citeplasm', 'dojo/domReady!' ], function ( Citeplasm ) {
+    require([ 'Citeplasm', 'dojo/domReady!' ], function ( Citeplasm ) {
         Citeplasm.init ();
     });
         

@@ -1,18 +1,19 @@
+//>> pure-amd
 // module:
 //          citeplasm/main.js
 // description:
 //          This is the main engine behind the official Citeplasm javascript
 //          client.
 
-define ( "citeplasm", [ 'require' ], function ( require ) {
-    var citeplasm = {};
+define ( "Citeplasm/main", [ 'require' ], function ( require ) {
+    var Citeplasm = {};
 
-    citeplasm.init = function () {
+    Citeplasm.init = function () {
         require ( [ 'dojo', 'dijit/form/Button', 'dijit/Toolbar', 'dijit/ToolbarSeparator' ], 
             function ( dojo, Button, Toolbar, ToolbarSeparator ) 
         {
             // create the main toolbar
-            citeplasm.toolbar = new Toolbar( {}, dojo.byId( "toolbar" ) );
+            Citeplasm.toolbar = new Toolbar( {}, dojo.byId( "toolbar" ) );
 
             // add the citeplasm logo
             var citeplasmButton = new Button({
@@ -21,8 +22,8 @@ define ( "citeplasm", [ 'require' ], function ( require ) {
                 showLabel: true,
                 /*iconClass: "CiteplasmIcon"*/
             });
-            citeplasm.toolbar.addChild ( citeplasmButton );
-            citeplasm.toolbar.addChild ( new ToolbarSeparator({}) );
+            Citeplasm.toolbar.addChild ( citeplasmButton );
+            Citeplasm.toolbar.addChild ( new ToolbarSeparator({}) );
 
             // add the default toolbar icons
             var newButton = new Button({
@@ -33,7 +34,7 @@ define ( "citeplasm", [ 'require' ], function ( require ) {
                 showLabel: true,
                 iconClass: "dijitEditorIcon dijitEditorIconNewPage"
             });
-            citeplasm.toolbar.addChild ( newButton );
+            Citeplasm.toolbar.addChild ( newButton );
             var driveButton = new Button({
                 id: "toolbar.drive",
                 // note: should always specify a label, for accessibility reasons.
@@ -42,12 +43,12 @@ define ( "citeplasm", [ 'require' ], function ( require ) {
                 showLabel: true,
                 iconClass: "dijitEditorIcon dijitEditorIconSelectAll"
             });
-            citeplasm.toolbar.addChild ( driveButton );
+            Citeplasm.toolbar.addChild ( driveButton );
 
             // add a separator; windows will appear after this
-            citeplasm.toolbar.addChild ( new ToolbarSeparator({}) );
+            Citeplasm.toolbar.addChild ( new ToolbarSeparator({}) );
         } ); // end require
     } // end init
 
-    return citeplasm;
+    return Citeplasm;
 });

@@ -6,19 +6,19 @@ dependencies = {
     action: 'release',
 
     // Strips all comments from CSS files.
-    cssOptimize: 'comments',
+    //cssOptimize: 'comments',
 
     // Excludes tests, demos, and original template files from being included in the built version.
     mini: true,
 
     // Uses ShrinkSafe as the JavaScript minifier. This can also be set to "closure" to use Closure Compiler.
-    optimize: 'shrinksafe',
+    //optimize: 'shrinksafe',
 
     // This is the directory within the output directory that built JavaScript will be placed.
-    releaseName: 'js',
+    releaseName: 'assets',
 
     // Strips all calls to console functions within the code.
-    stripConsole: 'all',
+    //stripConsole: 'all',
 
     // The default selector engine is not included by default in a dojo.js build in order to make mobile builds
     // smaller. We add it back here to avoid that extra HTTP request.
@@ -31,6 +31,9 @@ dependencies = {
         // This is our main application layer. This layer will normally contain most or all of your application code.
         { name: '../app/main.js', dependencies: [ 'app.main' ] },
 
+        // this contains all the Citeplasm library code, less the app glue
+        { name: '../Citeplasm/main.js', dependencies: [ 'Citeplasm.main' ] },
+
         // In the demo application, we conditionally require app/Dialog on the client-side, so we're building a
         // separate layer containing just that client-side code.
         { name: '../app/Dialog.js', dependencies: [ 'app.Dialog' ] }
@@ -42,7 +45,8 @@ dependencies = {
     prefixes: [
         [ 'dijit', '../dijit' ],
         //[ 'dojox', '../dojox' ],
-        [ 'app', '../app' ]
+        [ 'app', '../app' ],
+        [ 'Citeplasm', '../Citeplasm' ]
     ],
 
     // Providing hints to the build system allows code to be conditionally removed on a more granular level than

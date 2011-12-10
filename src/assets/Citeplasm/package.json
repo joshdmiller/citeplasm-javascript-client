@@ -1,0 +1,19 @@
+{
+	"name": "Citeplasm",
+	"version":"0.1dev",
+	"directories": {
+		"lib": "."
+	},
+	"main": "main",
+	"description": "Citeplasm is a best in class research and collaboration system for academic professionals and students. This module contains the javascript necessary to run the official, supported javascript client to the Citeplasm web service.",
+	"licenses": [
+		 {
+				 "type": "GPLv3",
+				 "url": "http://www.gnu.org/licenses/gpl"
+		 }
+	],
+	"bugs": "http://www.emergenesis.com",
+	"keywords": ["research", "emergenesis", "citeplasm"],
+	"homepage": "http://www.citeplasm.org/",
+	//"dojoBuild": "main.profile.js"
+}
